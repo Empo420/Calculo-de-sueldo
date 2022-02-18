@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expanded-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand">FORMULARIO PARA EMPRESA</a>
+        </div>
+    </nav>
+    <div class="container ">
+        <div class="row">
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <section>
+                            <form id="formulario">
+                                <div class="mb-3">
+                                    <label for="text" class="form-label">Documento :</label>
+                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Ingrese su Documento" required>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                      <label for="text" class="form-label">Nombres</label>
+                                      <input type="text" class="form-control" name="nombres" id="nombres" placeholder="Ingrese sus Nombres" aria-label="Ingrese sus Nombres" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="text" class="form-label">Apellidos:</label>
+                                        <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos" aria-label="Ingrese sus Apellidos" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3"></div>
+                                <div class="row g-3">
+                                    <div class="col">
+                                      <label for="number" class="form-label">Su Sueldo:</label>
+                                      <input type="number" class="form-control" name="sueldo" id="sueldo" placeholder="Ingres su Sueldo" aria-label="Ingres su Sueldo" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="number" class="form-label">Dias trabajados:</label>
+                                        <input type="number" class="form-control" name="dias" id="dias" placeholder="Ingrese los dias que trabajo" aria-label="Ingrese los dias que trabajo" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3"></div>
+                                <div class="mb-3">
+                                    <label for="text" class="form-label">Su Prima :</label>
+                                    <input type="text" class="form-control" id="prima" name="prima" placeholder="Calcule su Prima">
+                                </div>
+                                <button type="button" onclick="calcular()" class="btn btn-success"id="boton1">calcular</button>
+                                <button type="button" onclick="reiniciar()" class="btn btn-danger" id="boton2">reiniciar</button>
+                                <button type="submit" class="btn btn-primary" id="boton">Enviar</button>
+                            </form>
+                        
+                        <h1>Datos Del formulario</h1>
+                            <div class="tabla">
+                                <table id="miTabla">
+                                    <tbody>
+                                    <tr>
+                                        <th>Documentos</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
+                                        <th>Sueldos</th>
+                                        <th>Dias trabajados</th>
+                                        <th>Primas</th>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                <button type="button" onclick="sumaDePrimas()" class="btn btn-warning" id="boton3">Sumar Primas</button>
+                                <br></br>
+                                <section>
+                                    <div class="row g-3">
+                                        <div class="col">
+                                        <label for="number" class="form-label">Suma de las Primas:</label>
+                                        <input type="number" class="form-control" name="sumaPrima" id="sumaPrima" placeholder="Suma de todas la primas" aria-label="Suma de todas la primas">
+                                        </div>
+                                        <div class="col">
+                                            <label for="number" class="form-label">Promedio de la suma de las Primas:</label>
+                                            <input type="number" class="form-control" name="promedio" id="promedio" placeholder="Promedio de las primas" aria-label="Promedio de las primas">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3"></div>
+                                    <div class="row g-3">
+                                        <div class="col">
+                                        <label for="number" class="form-label">Prima Mayor:</label>
+                                        <input type="number" class="form-control" name="primaMayor" id="primaMayor" placeholder="Prima Mayor" aria-label="Prima Mayor">
+                                        </div>
+                                        <div class="col">
+                                            <label for="number" class="form-label">Prima Menor:</label>
+                                            <input type="number" class="form-control" name="primaMenor" id="primaMenor" placeholder="Prima Menor" aria-label="Prima Menor">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <script src="./assest/JS/calculo.js"></script>
+</body>
+</html>
